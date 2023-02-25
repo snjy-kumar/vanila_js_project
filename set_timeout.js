@@ -22,3 +22,22 @@ document.getElementById("hero").onclick = function(){
   clearTimeout(timer3);
   alert(`Do it now for purchase this course`)
 }
+
+
+
+//setInterval() = invokes a function repeadetly after certain time which is put already.
+//It is a asynchrous function (which doesn't change during execution)
+
+let count = 0;
+let max = prompt("count up to what the number?");
+max = Number(max);
+
+const myTimer = setInterval(countUp, 3000);
+
+function countUp(){
+  count+= 1;
+  console.log(count);
+  if(count>= max){
+    clearInterval(myTimer);
+  }
+}
