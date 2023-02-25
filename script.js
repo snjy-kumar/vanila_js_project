@@ -1,32 +1,16 @@
-// get = binds an object property to a function 
-//       when that property is accessed
-// set = binds an object property to a function
-//       when that property is assigned a value/
+// anonymous object 
 
-class Car {
-  constructor(power){
-    this._gas = 30;
-    this._power = power;
+class Card{
+  constructor(value, suite){
+    this.value = value;
+    this.suite = suite;
   }
-  get power(){
-    return `${this._power}hp`;
-  }
-  get gas(){
-    return `${this._gas}L (${this._gas / 50 * 100} %)`;
-  }
-  set gas(value){
-    if(value>50){
-      value = 50;
-    }
-    else if (value<0){
-      value = 0;
-    }
-    this._gas = value;
-  }
-  
 }
 
-let car = new Car(500);
-car.gas = 20;
-console.log(car.power);
-console.log(car.gas);
+let cards = [new Card("A", "Heart"),
+             new Card("2", "Heart"),
+             new Card("3", "Heart"),
+             new Card("4", "Heart")];
+
+cards.forEach(card => console.log(`${card.value} ${card.suite}`));
+             
