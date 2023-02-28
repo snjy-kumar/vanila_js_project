@@ -1,0 +1,19 @@
+#myDiv{
+  background-color: lightgreen;
+  width: 100px;
+  height: 100px;
+  border: 1px solid;
+}
+
+#bigDiv {
+    background-color: lightgreen;
+  width: 200px;
+  height: 200px;
+}
+
+
+#myImg{
+  width:500px;
+  height: 400px;
+  
+}
