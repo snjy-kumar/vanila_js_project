@@ -1,4 +1,6 @@
-html {
-  height: 100%;
-  width: 100%;
+#myDiv{
+  background-color: lightgreen;
+  width: 100px;
+  height: 100px;
+  position: relative;
 }

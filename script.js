@@ -1,16 +1,78 @@
-// The idea behind a module is that it's file of reusable
-// We can import sections of pre-written code to use whenever
-// Great for any general utility values and functions
-// Helps to make your code more reusable and maintanalble
-// Think of modules as seperate chapter of a book
+//Animation
+const myButton = document.getElementById("hero");
+const myAnimation = document.getElementById("myDiv");
+
+myButton.addEventListener("click", begin);
 
 
-import { PI, getCircumference, getArea } from "./math";
+function begin(){
+  let timerId = null;
+  let scaleX = 1;
+  let scaleY = 1;
 
-alert(PI);
+  timerId = setInterval(frame, 5);
 
-let circumference = getCircumference(10);
-console.log(circumference);
+  function frame(){
+    if(scaleX >=2){
+      clearInterval(timerId);
+    }
+    }else {
+    scaleX+=0.01;
+    myAnimation.style.transform = "scale("+scaleX+","+scaleY")";
+    }
+  }
+}
 
-let area = getArea(5);
-console.log(area);
+
+//Diagonally Rotating Animation
+// function begin(){
+//   let timerId = null;
+//   let degrees = 0;
+//   let x = 0;
+//   let y = 0;
+
+//   timerId = setInterval(frame, 5);
+
+//   function frame(){
+//     if(x>=200||y>=200){
+//       clearIneterval(timerId);
+      
+//     }else {
+//       degrees+=3;
+//       x+=1;
+//       y+=1;
+//       myAnimation.style.left = x + "px";
+//       myAnimation.style.top = y + "px";
+//       myAnimation.style.transform = "rotateZ("+degrees+"deg)";
+//     }
+//   }
+// }
+
+
+
+
+
+
+
+
+
+//for diagonally Animation
+// function begin(){
+//   let timerId = null;
+//   let x = 0;
+//   let y = 0;
+
+//   timerId = setInterval(frame, 5);
+
+//   function frame(){
+//     if(x>= 200 || y>=200){
+//       clearIneterval(timerId);
+      
+//     }else {
+//       x+=1;
+//       y+=1;
+//       myAnimation.style.left = x + "px";
+//       myAnimation.style.top = y + "px";
+//     }
+//   }
+// }
